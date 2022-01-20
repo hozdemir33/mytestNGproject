@@ -13,6 +13,7 @@ public class Driver {
     Why ? => Reusability. Avaid duplication
     Faster development
      */
+
     private static WebDriver driver;
     private Driver(){
     }
@@ -20,7 +21,7 @@ public class Driver {
     public static WebDriver getDriver(){
 
         if (driver==null){
-//           check the browser type
+//           CHECK the browser type
             String browser = ConfigurationReader.getProperty("browser");
             switch (browser){
                 case "chrome":
@@ -44,7 +45,8 @@ public class Driver {
         driver.manage().window().maximize();
         return driver;
     }
-    //    closeDriver is used for closing teh driver
+
+    //    closeDriver is used for closing the driver
     public static void closeDriver(){
         if (driver!=null){//if driver id POINTING SOMEWHHERE such as chromedriver
             driver.quit();

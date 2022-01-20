@@ -58,8 +58,7 @@ public class Day12_TestNGAnnotations {
         System.out.println("This is test- 4");
     }
     @Test(priority = 3)
-    public void test5(){
-        System.out.println("This is test 5");
-    }
+    public void test5(){ System.out.println("This is test 5");
 
+    }
 }

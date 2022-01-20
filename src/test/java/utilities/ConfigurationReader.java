@@ -4,8 +4,10 @@ import org.testng.annotations.Test;
 import java.io.FileInputStream;
 import java.util.Properties;
 public class ConfigurationReader {
-    //    This class willONLY be used for getting the data from
-//    configuration.properties file
+
+    //    This class will ONLY be used for getting the data from
+   //    configuration.properties file
+
     private static Properties properties;
     static {
 //        path of the config file
