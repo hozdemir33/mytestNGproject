@@ -13,9 +13,9 @@ public class LoginPage {
     public LoginPage(){PageFactory.initElements(Driver.getDriver(),this);}
 
     //    employee info
-    //    login for Gaimbank.com
-    //    gino.wintheiser
-    //    %B6B*q1!TH
+    //    LOGIN for Gaimbank.com
+    //    user_name =  gino.wintheiser
+    //    password  =   %B6B*q1!TH
 
     @FindBy(id="account-menu")
     public WebElement loginDropdown;
