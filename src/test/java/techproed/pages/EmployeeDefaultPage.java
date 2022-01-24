@@ -6,8 +6,8 @@ import org.openqa.selenium.support.PageFactory;
 
 import utilities.Driver;
 
-public class EmployeeDefaultPageHomePage {
-    public EmployeeDefaultPageHomePage(){PageFactory.initElements(Driver.getDriver(),this);}
+public class EmployeeDefaultPage {
+    public EmployeeDefaultPage(){PageFactory.initElements(Driver.getDriver(),this);}
 //    Find the object of Employee Default Page
 
     @FindBy(id = "entity-menu")

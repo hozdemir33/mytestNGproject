@@ -32,6 +32,9 @@ public class LoginPage {
     @FindBy(xpath = "//button[@type='submit']")
     public WebElement loginButton;
 
+    @FindBy(xpath = "//span[.='Sign out']")
+    public WebElement signOut;
+
 
     //Creating a reasuable login method
     //I will call this in the test classes to login

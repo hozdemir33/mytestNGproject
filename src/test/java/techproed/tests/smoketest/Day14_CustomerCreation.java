@@ -3,7 +3,8 @@ package techproed.tests.smoketest;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.Test;
 import techproed.pages.CreateCustomerPage;
-import techproed.pages.EmployeeDefaultPageHomePage;
+import techproed.pages.EmployeeDefaultPage;
+import techproed.pages.EmployeeDefaultPage;
 import techproed.pages.LoginPage;
 import utilities.ConfigurationReader;
 import utilities.Driver;
@@ -12,7 +13,7 @@ public class Day14_CustomerCreation {
 
     LoginPage loginPage = new LoginPage();
 
-    EmployeeDefaultPageHomePage employeeDefaultPage = new EmployeeDefaultPageHomePage();
+    EmployeeDefaultPage employeeDefaultPage = new EmployeeDefaultPage();
 
     CreateCustomerPage createCustomerPage=new CreateCustomerPage();
 
