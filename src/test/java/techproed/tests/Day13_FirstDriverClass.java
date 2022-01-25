@@ -2,6 +2,7 @@ package techproed.tests;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
 import utilities.ConfigurationReader;
 import utilities.Driver;
@@ -19,6 +20,13 @@ public class Day13_FirstDriverClass {
         Driver.getDriver().navigate().to(ConfigurationReader.getProperty("google_url"));
 
         System.out.println("Google Title:"+Driver.getDriver().getTitle());
+        Driver.closeDriver();
+
+    }
+
+    @AfterMethod
+
+    public void tearDown() {
         Driver.closeDriver();
 
     }

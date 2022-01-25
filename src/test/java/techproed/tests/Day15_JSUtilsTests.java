@@ -2,6 +2,7 @@ package techproed.tests;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
 
 import techproed.pages.LoginPage;
@@ -42,4 +43,11 @@ public class Day15_JSUtilsTests {
         JSUtils.flash(loginPage.loginButton);
 
     }
+
+    @AfterMethod
+
+    public void tearDown() {
+        Driver.closeDriver();
+    }
+
 }

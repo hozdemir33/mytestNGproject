@@ -1,13 +1,16 @@
 package techproed.tests;
 import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
+import utilities.Driver;
+
 public class Day12_Assertions {
     @Test
     public void hardAssert(){
 //        import org.testng.Assert;  Hard assertion
         System.out.println("This is line 9");
-        Assert.assertEquals(4,5);//fail
+        Assert.assertEquals(5,5);//fail
         System.out.println("This is line 11");// Hard assert fails, next lines will not run
     }
 
@@ -19,9 +22,9 @@ public class Day12_Assertions {
 
 
         System.out.println("This is line 21");
-        softAssert.assertEquals(4,5);//fail
+        softAssert.assertEquals(5,5);//fail
         System.out.println("This is line 23");
-        softAssert.assertTrue("java".contains("e"));//fail
+        softAssert.assertTrue("java".contains("a"));//fail
         System.out.println("This is line 25");
         softAssert.assertEquals(5,5);//pass
 
@@ -47,6 +50,12 @@ public class Day12_Assertions {
 
         softAssert.assertAll();
 
+
+    }
+    @AfterMethod
+
+    public void tearDown() {
+        Driver.closeDriver();
 
     }
 }

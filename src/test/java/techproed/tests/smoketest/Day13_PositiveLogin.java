@@ -1,5 +1,6 @@
 package techproed.tests.smoketest;
 
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
 import techproed.pages.LoginPage;
 import utilities.ConfigurationReader;
@@ -44,9 +45,12 @@ When do you do regression testing?
 Unit test < integration test(testing if components are working good together) < regression test
 * */
 
-    LoginPage loginPage = new LoginPage();
+    LoginPage loginPage;
+
     @Test
-    public void login(){ Driver.getDriver().get(ConfigurationReader.getProperty("gmi_login_url"));
+    public void login() {
+        Driver.getDriver().get(ConfigurationReader.getProperty("gmi_login_url"));
+        loginPage = new LoginPage();
 
         loginPage.loginDropdown.click();
         loginPage.signInButton.click();
@@ -54,5 +58,11 @@ Unit test < integration test(testing if components are working good together) < 
         loginPage.password.sendKeys(ConfigurationReader.getProperty("employee_password"));//dynamic
         loginPage.loginButton.click();
 
+    }
+
+    @AfterMethod
+
+    public void tearDown() {
+        Driver.closeDriver();
     }
 }
