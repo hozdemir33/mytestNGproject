@@ -24,11 +24,12 @@ There are 18 test scripts in my smoke
 Smoke test automation script should take about 15-20 minutes on average.
 ......
 Who chooses to include functionalities in the smoke test?
--Test Leads(Senior testers who knows the application very good), chooses what goes to smoke test suite.
--In my company, there is a team who decides the smoke test and regression test automation scripts
+
+-Test Leads(Senior testers who know the application very good), chooses what goes to the smoke test suite.
+-In my company, there is a team who decides to do smoke testing and regression testing automation scripts
 .........
 Regression Test:
-1. Testing ALL major functionalities of the application
+1. Testing ALL MAJOR functionalities of the application
 -All smokes tests +
 -loan creation +
 -account creation, edit, delete,...
@@ -36,7 +37,7 @@ Regression Test:
 -...many more
 -........
 -There are 600 Test scripts
--8-10 hours
+-8-10 hours to execute them all
 .......
 When do you do regression testing?
 1. Before every release.(minor(every 3 months) or major release(Every 6 months))
@@ -46,7 +47,6 @@ Unit test < integration test(testing if components are working good together) < 
 * */
 
     LoginPage loginPage;
-
     @Test
     public void login() {
         Driver.getDriver().get(ConfigurationReader.getProperty("gmi_login_url"));

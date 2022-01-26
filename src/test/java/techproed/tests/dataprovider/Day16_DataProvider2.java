@@ -20,12 +20,12 @@ public class Day16_DataProvider2 {
         };
         return employeeCredentials;
     }
-    LoginPage loginPage;
-    EmployeeDefaultPage employeeDefaultPage;
+    LoginPage loginPage;//proper way
+    EmployeeDefaultPage employeeDefaultPage;//proper way
     public void logIn() throws InterruptedException {
         Driver.getDriver().get(ConfigurationReader.getProperty("gmi_login_url"));
-        loginPage=new LoginPage();
-        employeeDefaultPage=new EmployeeDefaultPage();
+        loginPage=new LoginPage();//proper way
+        employeeDefaultPage=new EmployeeDefaultPage();//proper way
         ReusableMethods.waitFor(1);
         loginPage.loginDropdown.click();
         ReusableMethods.waitFor(1);;

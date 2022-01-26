@@ -14,7 +14,8 @@ import utilities.ReusableMethods;
 import java.io.IOException;
 import java.util.List;
 import java.util.Map;
-public class Day15_LoginTest {
+
+    public class Day15_LoginTest {
     /*
      * We will get the credentials from excel sheet
      * We will send multiple credentials from excel
@@ -25,15 +26,15 @@ public class Day15_LoginTest {
     List<Map<String,String>> testData;
     //    {{user1,pass1}, {user2,pass2},{user3,pass3},...}
 
-    LoginPage loginPage;
-    EmployeeDefaultPage employeeDefaultPage;
+    LoginPage loginPage; //more proper way
+    EmployeeDefaultPage employeeDefaultPage; //more proper way
 
     public void logIn() throws InterruptedException {
 
         Driver.getDriver().get(ConfigurationReader.getProperty("gmi_login_url"));
 
-        loginPage=new LoginPage();
-        employeeDefaultPage=new EmployeeDefaultPage();
+        loginPage=new LoginPage(); //more proper way
+        employeeDefaultPage=new EmployeeDefaultPage(); //more proper way
 
         ReusableMethods.waitFor(1);
         loginPage.loginDropdown.click();
@@ -66,11 +67,10 @@ public class Day15_LoginTest {
         testData=excelUtil.getDataList();
 //        System.out.println(testData);//Testing if username password list accessable
         for (Map<String,String> eachData :testData){
-//            System.out.println(eachData);
+//        System.out.println(eachData);
             logIn();
 
             loginPage.username.sendKeys(eachData.get("username"));
-
             loginPage.password.sendKeys(eachData.get("password"));
             ReusableMethods.waitFor(1);
             loginPage.loginButton.click();

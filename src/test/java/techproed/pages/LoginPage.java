@@ -10,7 +10,7 @@ public class LoginPage {
     //    creating the constructor to initialize the page element
     //    PageFactory.initElements is used to initialize this page objects
 
-    public LoginPage(){PageFactory.initElements(Driver.getDriver(),this);}
+    public LoginPage() {PageFactory.initElements(Driver.getDriver(),this);}
 
     //    employee info
     //    LOGIN for Gaimbank.com
