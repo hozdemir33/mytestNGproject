@@ -14,20 +14,23 @@ Note: In cucumber we are going to use special plugin. Cucumber parallel testing 
 -----------
 
 > 3. What is thread-count ?
--Thread means the code. It will be same as the number of browser.
+-Thread means the code. It will be same as the number of browsers.
 -----------
 > 4. What is thread-safe ?
--It means synchronized codes. In thead-safe code, we can run multiple code in parallel.
+-It means synchronized codes. In thead-safe code, we can run multiple codes in parallel.
 -TestNG is thread-safe. It let us do parallel testing with no issue.
 -----------
 >5. Why do you do parallel testing?
 -To save time
--We normally do not do parallel testing for one test. But when there are multiple test cases,
-then parallel testing
-saves a lot of time.
+-We normally do not do parallel testing for one test. But, when there are multiple test cases,
+then we do parallel testing to save a lot of time.
+
 -For example, I have a parallel test suite for my smoke test.
+
 -We also have a suite for regression tests to run in parallel.
--I also have some end to end test suite that I can run in parallel.
+
+-I also have some end2end test suite that I can run in parallel.
+
 -I have a few small class that i run in parallel using data provider.
 For example, for my login tests, I have multiple credentials
-that i use for parallel testing.
+that i use for the parallel testing.
