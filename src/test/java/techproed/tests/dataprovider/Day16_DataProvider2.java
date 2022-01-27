@@ -22,10 +22,14 @@ public class Day16_DataProvider2 {
     }
     LoginPage loginPage;//proper way
     EmployeeDefaultPage employeeDefaultPage;//proper way
+
     public void logIn() throws InterruptedException {
+
         Driver.getDriver().get(ConfigurationReader.getProperty("gmi_login_url"));
+
         loginPage=new LoginPage();//proper way
         employeeDefaultPage=new EmployeeDefaultPage();//proper way
+
         ReusableMethods.waitFor(1);
         loginPage.loginDropdown.click();
         ReusableMethods.waitFor(1);;
@@ -40,6 +44,7 @@ public class Day16_DataProvider2 {
         loginPage.signInButton.click();
     }
     @Test(dataProvider = "employeeInfo")
+
     public void employeeLogin(String userName, String password) throws InterruptedException {
         logIn();
         loginPage.username.sendKeys(userName);
@@ -47,6 +52,7 @@ public class Day16_DataProvider2 {
         loginPage.loginButton.click();
         ReusableMethods.waitFor(1);
     }
+
     @AfterMethod
     public void tearDown(){
         Driver.closeDriver();

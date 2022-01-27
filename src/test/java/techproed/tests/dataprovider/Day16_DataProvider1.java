@@ -23,8 +23,11 @@ import org.testng.annotations.Test;
             return employeeCredentials;
         }
         @Test(dataProvider = "employeeInfo")
+
         public void employeeLogin(String userName, String password){
-            System.out.println(userName+" | "+password);
+
+            System.out.println(userName+ " | "+ password);
+
         }
     }
 

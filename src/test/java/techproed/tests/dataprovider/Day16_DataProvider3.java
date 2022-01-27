@@ -16,7 +16,7 @@ import utilities.ReusableMethods;
 public class Day16_DataProvider3 {
     @DataProvider(name = "employeeInfo")
     public Object[][] getData(){
-//       The only difference between DataProvider2 and DataProvider3 will be the source of teh data
+//       The only difference between DataProvider2 and DataProvider3 will be the source of the data
 //        In this method we will get data from Excel
 //        path of the excel sheet
         String path = "./src/test/java/resources/mysmoketestdata.xlsx";
@@ -30,7 +30,7 @@ public class Day16_DataProvider3 {
 //                {"gino.wintheiser","%B6B*q1!TH"},
 //                {"dallas.batz","dOWjuXz8*es6"},
 //                {"leonel.skiles","x3uvY0f8hw1T"}
-//        };
+//     };
         return employeeCredentials;
     }
     LoginPage loginPage;//proper way

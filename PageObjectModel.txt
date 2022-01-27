@@ -1,5 +1,5 @@
 
-POM STRUCTURE IS BELOW!
+------POM---PAGE OBJECT MODELING'S STRUCTURE IS IN THE BELOW!
 
 When a user goes to the registration page
 And enter the all fields

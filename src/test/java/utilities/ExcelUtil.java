@@ -22,7 +22,7 @@ public class ExcelUtil {
             //getting the worksheet
             workSheet = workBook.getSheet(sheetName);
             //asserting if sheet has data or not
-            Assert.assertNotNull(workSheet, "Worksheet: \"" + sheetName + "\" was not found\n");
+            Assert.assertNotNull(workSheet, "Worksheet:" + sheetName + "was not found");
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
@@ -32,13 +32,17 @@ public class ExcelUtil {
     public List<Map<String, String>> getDataList() {
         // getting all columns
         List<String> columns = getColumnsNames();
+
         // method will return this
+
         List<Map<String, String>> data = new ArrayList<>();
         for (int i = 1; i < rowCount(); i++) {
             // get each row
             Row row = workSheet.getRow(i);
             // creating map of the row using the column and value
+
             // key=column, value=cell
+
             Map<String, String> rowMap = new HashMap<String, String>();
             for (Cell cell :row) {
                 int columnIndex = cell.getColumnIndex();

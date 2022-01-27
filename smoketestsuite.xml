@@ -6,4 +6,5 @@
             <package name="techproed.tests.smoketest" />
         </packages>
     </test>
+
 </suite>

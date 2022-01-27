@@ -68,13 +68,13 @@ import java.util.Map;
 //        System.out.println(testData);//Testing if username password list accessable
         for (Map<String,String> eachData :testData){
 //        System.out.println(eachData);
+
             logIn();
 
             loginPage.username.sendKeys(eachData.get("username"));
             loginPage.password.sendKeys(eachData.get("password"));
             ReusableMethods.waitFor(1);
             loginPage.loginButton.click();
-
 
             //    Asserting if log in is successful using My Operation element
             Assert.assertTrue(employeeDefaultPage.myOperationsDropdown.isDisplayed());
